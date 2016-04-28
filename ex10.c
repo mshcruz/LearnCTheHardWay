@@ -13,10 +13,12 @@ int main(int argc, char *argv[])
 	//let's make our own array of strings
 	char *states[] = {
 			"California", "Oregon",
-			"Washington", "Texas"
+			"Washington", "Texas", NULL, NULL, NULL
 	};
-	int num_states = 4;
-
+	int num_states = 6;
+	states[0] = argv[0];
+	argv[0] = states[1];
+	printf("New argv[0]: %s\n", argv[0]);
 	for (i = 0; i < num_states; i++) {
 		printf("state %d: %s\n", i, states[i]);
 	}
