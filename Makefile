@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -g
+CFLAGS=-Wall -g -DNDEBUG
 TARGET=$(patsubst %.c, %, $(wildcard *.c))
 
 .PHONY: all clean
